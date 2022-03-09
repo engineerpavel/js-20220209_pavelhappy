@@ -23,12 +23,12 @@ export default class ColumnChart {
     const scale = this.chartHeight / maxValue;
 
     return data
-      .map(item => {
-        const percent = (item / maxValue * 100).toFixed(0);
+    .map(item => {
+      const percent = (item / maxValue * 100).toFixed(0);
 
-        return `<div style="--value: ${Math.floor(item * scale)}" data-tooltip="${percent}%"></div>`;
-      })
-      .join('');
+      return `<div style="--value: ${Math.floor(item * scale)}" data-tooltip="${percent}%"></div>`;
+    })
+    .join('');
   }
 
   getLink() {
